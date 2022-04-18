@@ -1,0 +1,293 @@
+@import "./variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Work+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+a,
+body,
+button,
+div,
+footer,
+form,
+h1,
+h2,
+h3,
+header,
+html,
+img,
+input,
+label,
+li,
+nav,
+p,
+select,
+span,
+table,
+textarea,
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+body,
+html {
+  overscroll-behavior: none;
+  overflow-x: hidden;
+}
+
+li,
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  display: block;
+  box-sizing: border-box;
+  border-radius: 0;
+  outline: none;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+textarea {
+  overflow: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+a,
+img,
+picture,
+svg,
+video {
+  display: block;
+}
+
+html {
+  background-color: $black;
+  color: $white;
+}
+
+h1 {
+  font-family: "Libre Baskerville", serif;
+  font-size: $h1;
+  color: $white;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "Libre Baskerville", serif;
+  font-size: $h2;
+  color: $white;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: "Libre Baskerville", serif;
+  font-size: $h3;
+  font-weight: 400;
+  color: $white;
+}
+
+p {
+  font-family: "Work Sans", sans-serif;
+  font-size: $p;
+  font-weight: 400;
+  line-height: 200%;
+  color: $white;
+}
+
+.bold,
+strong {
+  font-weight: 800;
+}
+
+.overline {
+  text-transform: uppercase;
+  font-size: view-width(16);
+}
+
+//
+////
+//
+
+body {
+  background-color: $black;
+}
+
+section#section_hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 1));
+  }
+
+  h1 {
+    margin-bottom: $m6;
+  }
+
+  div.content {
+    position: absolute;
+    left: column-width(1);
+    bottom: view-width(64);
+  }
+}
+
+div#nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+  margin-left: column-width(9);
+  height: 0;
+}
+
+section#section_1 {
+  display: flex;
+  flex-direction: row;
+
+  p {
+    width: column-width(3);
+    margin-left: column-width(1);
+  }
+}
+
+section#section_2 {
+  margin-top: view-width(420);
+  div.part_1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    div {
+      width: column-width(4);
+      margin-left: column-width(1);
+
+      p {
+        margin-bottom: view-width(32);
+      }
+    }
+
+    img {
+      height: auto;
+      width: column-width(5);
+      margin-left: column-width(1);
+    }
+  }
+
+  div.part_2 {
+    position: relative;
+    margin-top: view-width(128);
+    img {
+      width: 100vw;
+      height: auto;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 1)
+      );
+    }
+
+    .quote {
+      position: absolute;
+      top: view-width(128);
+      left: 50%;
+      transform: translateX(-50%);
+      width: column-width(8);
+      text-align: center;
+
+      h3 {
+        margin-bottom: view-width(16);
+      }
+    }
+  }
+
+  div.part_3 {
+    display: flex;
+    flex-direction: row;
+    margin-top: view-width(96);
+
+    div {
+      width: column-width(4);
+      margin-left: column-width(1);
+      p {
+        margin-bottom: view-width(32);
+      }
+    }
+
+    div:last-child {
+      margin-top: view-width(212);
+    }
+  }
+}
+
+// @media only screen and (max-width: 520px) {
+//   h1 {
+//     font-size: $h1Mobile;
+//   }
+
+//   h2 {
+//     font-size: $h2Mobile;
+//   }
+
+//   h3 {
+//     font-size: $h3Mobile;
+//   }
+
+//   p {
+//     font-size: $pMobile;
+//   }
+// }

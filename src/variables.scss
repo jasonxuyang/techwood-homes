@@ -1,0 +1,62 @@
+@function column-width($width) {
+  @return ($columnWidth * $width);
+}
+
+@function column-width-mobile($width) {
+  @return ($columnWidthMobile * $width);
+}
+
+@function view-width($pixel) {
+  @return (calc($pixel / 1440) * 100vw);
+}
+
+@function view-width-mobile($pixel) {
+  @return (calc($pixel / 375) * 100vw);
+}
+
+$black: #000000;
+$white: #ffffff;
+
+$h1: view-width(72);
+$h2: view-width(48);
+$h3: view-width(32);
+$p: view-width(18);
+
+$h1Mobile: view-width-mobile(48);
+$h2Mobile: view-width-mobile(32);
+$h3Mobile: view-width-mobile(20);
+$pMobile: view-width-mobile(16);
+
+$m6: view-width(6);
+$m12: view-width(12);
+$m16: view-width(16);
+$m24: view-width(24);
+$m32: view-width(32);
+$m48: view-width(48);
+$m64: view-width(64);
+$m96: view-width(96);
+$m128: view-width(128);
+$m144: view-width(144);
+$m192: view-width(192);
+$m240: view-width(240);
+
+$m6Mobile: view-width-mobile(6);
+$m12Mobile: view-width-mobile(12);
+$m16Mobile: view-width-mobile(16);
+$m24Mobile: view-width-mobile(24);
+$m32Mobile: view-width-mobile(32);
+$m48Mobile: view-width-mobile(48);
+$m64Mobile: view-width-mobile(64);
+$m96Mobile: view-width-mobile(96);
+$m128Mobile: view-width-mobile(128);
+$m144Mobile: view-width-mobile(144);
+$m192Mobile: view-width-mobile(192);
+$m240Mobile: view-width-mobile(240);
+
+$columnWidth: view-width(120);
+$columnWidthMobile: view-width-mobile(69);
+
+$w1Mobile: 19.733vw;
+$w2Mobile: 43.733vw;
+$w3Mobile: 67.467vw;
+$w4Mobile: 91.467vw;
