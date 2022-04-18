@@ -65,24 +65,6 @@ const findPointerPosition = (e) => {
   }
 };
 
-// const updateImageCaption = () => {
-//   imageCaption.style.top = cursorX;
-//   imageCaption.style.left = cursorY;
-// };
-
-// const updatePointerPosition = () => {
-//   cursorX = lerp(cursorX, pointerPosX, 0.2);
-//   cursorY = lerp(cursorY, pointerPosY, 0.2);
-//   cursorX = Math.floor(cursorX * 100) / 100;
-//   cursorY = Math.floor(cursorY * 100) / 100;
-
-//   cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
-// };
-
-// const scrollTo = (section) => {
-//   window.scrollBy(0, section.current.getBoundingClientRect().top);
-// };
-
 const parallax = () => {
   parallaxElements.forEach((element) => {
     element.style.transform = `translate(0px, ${

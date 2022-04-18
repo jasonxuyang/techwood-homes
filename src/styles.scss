@@ -168,12 +168,19 @@ section#section_hero {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 1));
   }
 
-  h1 {
-    margin-bottom: $m6;
+  h2 {
+    width: column-width(4);
+  }
+
+  h3 {
+    margin-left: column-width(1);
+    width: column-width(4);
   }
 
   div.content {
     position: absolute;
+    display: flex;
+    flex-direction: row;
     left: column-width(1);
     bottom: view-width(32);
   }
