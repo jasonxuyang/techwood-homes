@@ -7,6 +7,7 @@ let images = document.querySelectorAll("img");
 let imageCaption = document.getElementById("img_caption");
 let body = document.body;
 let parallaxElements = document.querySelectorAll(".parallax");
+let fadeElements = document.querySelectorAll(".fade");
 let wrapperY = 0;
 let cursorX = 0;
 let cursorY = 0;
@@ -29,6 +30,11 @@ const initPage = () => {
 
 const scroll = () => {
   scrollY = window.scrollY;
+  fadeElements.forEach((element) => {
+    if (checkInView(element)) {
+      fadeIn(element);
+    }
+  });
 };
 
 const scrollTo = (section) => {
@@ -50,6 +56,21 @@ const handleMouseEnter = (e) => {
 
 const handleMouseLeave = (e) => {
   imageCaption.style.opacity = "0";
+};
+
+const checkInView = (element) => {
+  let bounding = element.getBoundingClientRect();
+
+  return (
+    bounding.top >= 0 &&
+    bounding.left >= 0 &&
+    bounding.bottom <= window.innerHeight &&
+    bounding.right <= window.innerWidth
+  );
+};
+
+const fadeIn = (element) => {
+  element.style.opacity = 1;
 };
 
 const lerp = (a, b, n) => {
@@ -82,7 +103,6 @@ const render = () => {
     wrapperY = Math.floor(wrapperY * 100) / 100;
     main.style.transform = `translate(0px, -${wrapperY}px)`;
 
-    // updateImageCaption();
     parallax();
 
     window.requestAnimationFrame(render);
