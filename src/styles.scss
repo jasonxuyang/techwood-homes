@@ -44,7 +44,7 @@ ul {
 body,
 html {
   overscroll-behavior: none;
-  overflow-x: hidden;
+  overflow-x: visible;
 }
 
 li,
@@ -118,6 +118,7 @@ h3 {
   font-family: "Libre Baskerville", serif;
   font-size: $h3;
   font-weight: 400;
+  line-height: 180%;
   color: $white;
 }
 
@@ -178,12 +179,20 @@ section#section_hero {
   }
 }
 
+div#content_container {
+  overflow: visible;
+}
+
 div#nav {
   position: -webkit-sticky;
   position: sticky;
-  top: 10px;
+  top: view-width(32);
   margin-left: column-width(9);
   height: 0;
+  z-index: 10;
+  mix-blend-mode: difference;
+  text-align: end;
+  width: column-width(2);
 }
 
 section#section_1 {
@@ -207,6 +216,9 @@ section#section_2 {
       width: column-width(4);
       margin-left: column-width(1);
 
+      h2 {
+        margin-bottom: view-width(32);
+      }
       p {
         margin-bottom: view-width(32);
       }
@@ -270,6 +282,64 @@ section#section_2 {
 
     div:last-child {
       margin-top: view-width(212);
+    }
+  }
+}
+
+section#section_3 {
+  margin-top: view-width(420);
+
+  div.part_1 {
+    h2 {
+      margin-left: column-width(1);
+    }
+
+    div.content {
+      display: flex;
+      flex-direction: row;
+      margin-left: column-width(1);
+
+      p {
+        margin-top: view-width(32);
+        width: column-width(4);
+      }
+
+      div {
+        margin-left: column-width(1);
+      }
+    }
+  }
+
+  div.part_2 {
+    margin-top: view-width(196);
+    div.quote {
+      width: column-width(4);
+    }
+
+    div.left {
+      margin-left: column-width(1);
+    }
+
+    div.right {
+      margin-left: column-width(6);
+    }
+  }
+
+  div.part_3 {
+    margin-top: view-width(128);
+    margin-left: column-width(1);
+    width: column-width(10);
+    height: 80vh;
+  }
+
+  div.part_4 {
+    margin-top: view-width(128);
+    display: flex;
+    flex-direction: row;
+
+    p {
+      width: column-width(4);
+      margin-left: column-width(1);
     }
   }
 }
