@@ -181,12 +181,14 @@ section#section_hero {
 
 div#content_container {
   overflow: visible;
+  position: relative;
+  z-index: 10;
 }
 
 div#nav {
-  position: -webkit-sticky;
-  position: sticky;
-  top: view-width(32);
+  //   position: -webkit-sticky;
+  //   position: sticky;
+  //   top: view-width(32);
   margin-left: column-width(9);
   height: 0;
   z-index: 10;
@@ -211,6 +213,8 @@ section#section_2 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    position: relative;
+    z-index: 10;
 
     div {
       width: column-width(4);
@@ -234,6 +238,7 @@ section#section_2 {
   div.part_2 {
     position: relative;
     margin-top: view-width(128);
+    z-index: 1;
     img {
       width: 100vw;
       height: auto;
@@ -268,9 +273,11 @@ section#section_2 {
   }
 
   div.part_3 {
+    position: relative;
     display: flex;
     flex-direction: row;
     margin-top: view-width(96);
+    z-index: 10;
 
     div {
       width: column-width(4);
@@ -326,7 +333,7 @@ section#section_3 {
   }
 
   div.part_3 {
-    margin-top: view-width(128);
+    margin-top: view-width(196);
     margin-left: column-width(1);
     width: column-width(10);
     height: 80vh;
