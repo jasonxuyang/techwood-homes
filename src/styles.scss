@@ -175,7 +175,7 @@ section#section_hero {
   div.content {
     position: absolute;
     left: column-width(1);
-    bottom: view-width(64);
+    bottom: view-width(32);
   }
 }
 
@@ -186,23 +186,53 @@ div#content_container {
 }
 
 div#nav {
-  //   position: -webkit-sticky;
-  //   position: sticky;
-  //   top: view-width(32);
-  margin-left: column-width(9);
-  height: 0;
+  position: fixed;
+  top: view-width(32);
+  left: column-width(9);
   z-index: 10;
   mix-blend-mode: difference;
   text-align: end;
   width: column-width(2);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .overline {
+    font-size: view-width(12);
+    line-height: normal;
+    margin-bottom: view-width(6);
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .overline:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+}
+
+p#img_caption {
+  position: fixed;
+  width: column-width(2);
+  padding: view-width(16);
+  background-color: $white;
+  color: $black;
+  line-height: normal;
+  z-index: 10;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  opacity: 0;
 }
 
 section#section_1 {
   display: flex;
   flex-direction: row;
+  position: relative;
+  z-index: 10;
 
   p {
-    width: column-width(3);
+    width: column-width(4);
     margin-left: column-width(1);
   }
 }
@@ -232,6 +262,7 @@ section#section_2 {
       height: auto;
       width: column-width(5);
       margin-left: column-width(1);
+      cursor: none;
     }
   }
 
@@ -242,6 +273,7 @@ section#section_2 {
     img {
       width: 100vw;
       height: auto;
+      cursor: none;
     }
 
     .overlay {
@@ -256,6 +288,7 @@ section#section_2 {
         rgba(0, 0, 0, 0),
         rgba(0, 0, 1)
       );
+      pointer-events: none;
     }
 
     .quote {
@@ -321,6 +354,9 @@ section#section_3 {
     margin-top: view-width(196);
     div.quote {
       width: column-width(4);
+      p {
+        margin-top: view-width(16);
+      }
     }
 
     div.left {
@@ -347,6 +383,7 @@ section#section_3 {
     p {
       width: column-width(4);
       margin-left: column-width(1);
+      margin-bottom: view-width(32);
     }
   }
 }

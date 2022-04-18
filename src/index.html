@@ -6,6 +6,19 @@
     <link rel="stylesheet" href="styles.scss" />
   </head>
   <body>
+    <div id="nav">
+      <p class="overline">
+        <a onclick="scrollToTop()">Introduction</a>
+      </p>
+      <p class="overline">
+        <a onclick="scrollToSection1()">Constructing Techwood Homes</a>
+      </p>
+      <p class="overline">
+        <a onclick="scrollToSection2()">Atlanta Summer 1996 Olympics</a>
+      </p>
+      <p class="overline"><a>Techwood Homes Today</a></p>
+    </div>
+    <p class="overline" id="img_caption"></p>
     <main id="main">
       <section id="section_hero">
         <img
@@ -16,199 +29,118 @@
         />
         <div class="overlay parallax" data-parallax="0.6"></div>
         <div class="content">
-          <h1>Techwood Homes</h1>
-          <h2>A Forgotten Public Housing Project</h2>
+          <h2>Techwood Homes</h2>
+          <h3>The First Public Housing Project</h3>
         </div>
       </section>
-      <div id="content_container">
-        <div id="nav">
-          <p class="overline"><a>Techwood Flats</a></p>
-          <p class="overline"><a>Desegregation</a></p>
-          <p class="overline"><a>Summer 1996 Olympics</a></p>
-          <p class="overline"><a>Displacement</a></p>
+      <section id="section_1">
+        <p>
+          Techwood, perhaps the most politically sensitive terrain in the city,
+          is the nation's oldest federal housing project, built during the Great
+          Depression, a historic fact that ensured its place on the National
+          Register of Historic Places. It occupies 75 acres of prime downtown
+          property, bordered on three sides by Coca-Cola headquarters, Georgia
+          Tech and the downtown hotel district.
+        </p>
+        <p>
+          Techwood Homes was an incredibly dangerous neighborhood that was
+          plagued with violence and crime. When Atlanta got the bid for the
+          Centennial Olympics, Techwood Homes was one of the first targets
+          because it put “too much poverty in one place”. The housing authority
+          thought to disperse the poverty by converting the neighborhood to a
+          more mixed-income complex.
+        </p>
+      </section>
+      <section id="section_2">
+        <div class="part_1">
+          <div>
+            <h2>Constructing Techwood Homes</h2>
+            <p>
+              The area in which Techwood homes was built was originally called
+              Techwood flats, a deteriorating slum for low income laborers.
+              After the Great Depression, President Herbert Hoover’s
+              administration enacted a housing project created to help
+              reconstruct cities with poor living conditions.
+            </p>
+            <p>
+              In August 1936, the first residents moved into the renovated
+              Techwood homes, the government’s first public housing project.
+              Conditions of Techwood homes were pleasant for white families,
+              many students of Georgia Tech lived in the area during their
+              studies.
+            </p>
+            <p>
+              However, the reconstruction of Techwood flats meant that some of
+              the original residents were displaced, about 1,611 families lost
+              their homes. Originally, about 80% of the residents in techwood
+              flats were african american. (Ruechel) After reconstruction into
+              Techwood homes, by national policy, only white residents were
+              allowed to move back in.
+            </p>
+          </div>
+          <img
+            id="fdr"
+            src="img/img-fdr.jpeg"
+            alt="Franklin D Roosevelt in Atlanta for Techwood Homes Dedication, 1935"
+            class="parallax"
+            data-parallax="1.1"
+          />
         </div>
-        <section id="section_1">
-          <p>
-            Techwood, perhaps the most politically sensitive terrain in the
-            city, is the nation's oldest federal housing project, built during
-            the Great Depression, a historic fact that ensured its place on the
-            National Register of Historic Places. It occupies 75 acres of prime
-            downtown property, bordered on three sides by Coca-Cola
-            headquarters, Georgia Tech and the downtown hotel district.
-          </p>
-          <p>
-            Techwood Homes was an incredibly dangerous neighborhood that was
-            plagued with violence and crime. When Atlanta got the bid for the
-            Centennial Olympics, Techwood Homes was one of the first targets
-            because it put “too much poverty in one place”. The housing
-            authority thought to disperse the poverty by converting the
-            neighborhood to a more mixed-income complex.
-          </p>
-        </section>
-        <section id="section_2">
-          <div class="part_1">
-            <div>
-              <h2>Techwood Flats</h2>
-              <p>
-                The area in which Techwood homes was built was originally called
-                Techwood flats, a deteriorating slum for low income laborers.
-                After the Great Depression, President Herbert Hoover’s
-                administration enacted a housing project created to help
-                reconstruct cities with poor living conditions.
-              </p>
-              <p>
-                In August 1936, the first residents moved into the renovated
-                Techwood homes, the government’s first public housing project.
-                Conditions of Techwood homes were pleasant for white families,
-                many students of Georgia Tech lived in the area during their
-                studies.
-              </p>
-              <p>
-                However, the reconstruction of Techwood flats meant that some of
-                the original residents were displaced, about 1,611 families lost
-                their homes. Originally, about 80% of the residents in techwood
-                flats were african american. (Ruechel) After reconstruction into
-                Techwood homes, by national policy, only white residents were
-                allowed to move back in.
-              </p>
-            </div>
-            <img
-              src="img/img-fdr.jpeg"
-              alt="fdr"
-              class="parallax"
-              data-parallax="1.1"
-            />
+        <div class="part_2 parallax" data-parallax="0.8">
+          <img
+            src="img/img-white-family.jpeg"
+            alt="Family in Techwood Homes apartment, late 1930s"
+          />
+          <div class="overlay"></div>
+          <div class="quote">
+            <h3>
+              “Techwood Homes eliminated a black neighborhood to recreate a
+              white one.”
+            </h3>
+            <p class="overline">frank ruechel</p>
           </div>
-          <div class="part_2 parallax" data-parallax="0.8">
-            <img src="img/img-white-family.jpeg" alt="white family" />
-            <div class="overlay"></div>
-            <div class="quote">
-              <h3>
-                “Techwood Homes eliminated a black neighborhood to recreate a
-                white one.”
-              </h3>
-              <p class="overline">frank ruechel</p>
-            </div>
-          </div>
+        </div>
 
-          <div class="part_3">
-            <div>
-              <p>
-                Techwood homes remained as an all-white housing project until
-                1968, after the civil rights movement. Six years after the
-                desegregation of public housing projects, techwood homes’
-                residents were 50% African American.
-              </p>
-              <p>
-                The chief executive of Coca-Cola, Paul Austin, was alarmed by
-                this and wanted to demolish the area to displace African
-                American families farther away from the ‘main hub’ of atlanta.
-                He submitted a proposal in 1974 to clear Techwood, relocating
-                it’s residents to slums outside the city limits and replacing
-                the property with moderate-income housing.
-              </p>
-            </div>
-            <div>
-              <p>
-                The plan was almost approved until Maynard Jackson was elected
-                as Atlanta’s first Black Mayor and suspended the plan. Jackson
-                started a new project in the 1980s to renovate the Techwood
-                homes once again, but it wasn’t enough to help the increasing
-                drug usage and violence in the community.
-              </p>
-              <p>
-                The public housing community became underfunded, and conditions
-                returned to how they were in the early 1930s, when Techwood
-                Homes was the Techwood Flats. Money was funneled into white
-                suburbs after the ‘white flight’ (where white families fled to
-                suburbs outside the city), leaving residents in these areas with
-                little to no government assistance to rebuild the techwood homes
-                community.
-              </p>
-            </div>
+        <div class="part_3">
+          <div>
+            <p>
+              Techwood homes remained as an all-white housing project until
+              1968, after the civil rights movement. Six years after the
+              desegregation of public housing projects, techwood homes’
+              residents were 50% African American.
+            </p>
+            <p>
+              The chief executive of Coca-Cola, Paul Austin, was alarmed by this
+              and wanted to demolish the area to displace African American
+              families farther away from the ‘main hub’ of atlanta. He submitted
+              a proposal in 1974 to clear Techwood, relocating it’s residents to
+              slums outside the city limits and replacing the property with
+              moderate-income housing.
+            </p>
           </div>
-        </section>
-        <section id="section_3">
-          <div class="part_1">
-            <h2>The Atlanta 1996 Olympics</h2>
-            <div class="content">
-              <p>
-                Techwood Homes, invisible during the successful Olympics bid,
-                has suddenly reappeared as Atlanta's most troublesome urban
-                dilemma. Across the street from the future Olympic Village and
-                within blocks of many future athletic events, Techwood has
-                become an embarrassment to Games promoters eager to show off
-                Atlanta to the world.
-              </p>
-              <div>
-                <p>
-                  When Glover took over the reins of the city’s Housing
-                  Authority in 1994, she did do something. She started the
-                  Olympic Legacy Program, a plan for redeveloping Atlanta’s
-                  public housing.
-                </p>
-                <p>
-                  The first project to be demolished was Techwood Homes. The
-                  logic was it put too much poverty in one place. The housing
-                  authority wanted to start over with a new approach: a private
-                  development for a mix of incomes.
-                </p>
-              </div>
-            </div>
+          <div>
+            <p>
+              The plan was almost approved until Maynard Jackson was elected as
+              Atlanta’s first Black Mayor and suspended the plan. Jackson
+              started a new project in the 1980s to renovate the Techwood homes
+              once again, but it wasn’t enough to help the increasing drug usage
+              and violence in the community.
+            </p>
+            <p>
+              The public housing community became underfunded, and conditions
+              returned to how they were in the early 1930s, when Techwood Homes
+              was the Techwood Flats. Money was funneled into white suburbs
+              after the ‘white flight’ (where white families fled to suburbs
+              outside the city), leaving residents in these areas with little to
+              no government assistance to rebuild the techwood homes community.
+            </p>
           </div>
-          <div class="part_2">
-            <div class="quote left parallax" data-parallax="1.1">
-              <h3>“Techwood Homes was a place you would not drive through.”</h3>
-              <p class="overline">
-                Thomas Boston, Professor of Economics at Georgia Tech
-              </p>
-            </div>
-            <div class="quote right parallax" data-parallax="0.9">
-              <h3>
-                "Atlanta has always wanted to be the next great city, so it's
-                always spending a lot of money on the future... We can use the
-                Olympics to bring us together and face the reality of what we
-                are and do something about it."
-              </h3>
-              <p class="overline">
-                Leon Eplan, atlanta city commissioner of planning and
-                development
-              </p>
-            </div>
-            <div class="quote left">
-              <h3>
-                "We support the Olympics and think they're a fine thing for
-                Atlanta, but we aren't going to let 'em hold 'em at our
-                expense."
-              </h3>
-              <p class="overline">
-                Margie Smith, president of the Techwood Homes tenants'
-                association
-              </p>
-            </div>
-            <div class="quote right parallax" data-parallax="1.1">
-              <h3>
-                “Part of creating a new place is that we wanted to put some
-                distance between the old bad history and the new history.”
-              </h3>
-              <p class="overline">
-                Renee Glover, director of the Atlanta Housing Authority during
-                the 1996 Olympics
-              </p>
-            </div>
-          </div>
-          <div class="part_3">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/zo8VHtv7dC0"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="part_4">
+        </div>
+      </section>
+      <section id="section_3">
+        <div class="part_1">
+          <h2>The Atlanta 1996 Olympics</h2>
+          <div class="content">
             <p>
               Techwood Homes, invisible during the successful Olympics bid, has
               suddenly reappeared as Atlanta's most troublesome urban dilemma.
@@ -231,8 +163,79 @@
               </p>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+        <div class="part_2">
+          <div class="quote left parallax" data-parallax="0.9">
+            <h3>“Techwood Homes was a place you would not drive through.”</h3>
+            <p class="overline">
+              Thomas Boston, Professor of Economics at Georgia Tech
+            </p>
+          </div>
+          <div class="quote right parallax" data-parallax="0.8">
+            <h3>
+              "Atlanta has always wanted to be the next great city, so it's
+              always spending a lot of money on the future... We can use the
+              Olympics to bring us together and face the reality of what we are
+              and do something about it."
+            </h3>
+            <p class="overline">
+              Leon Eplan, atlanta city commissioner of planning and development
+            </p>
+          </div>
+          <div class="quote left">
+            <h3>
+              "We support the Olympics and think they're a fine thing for
+              Atlanta, but we aren't going to let 'em hold 'em at our expense."
+            </h3>
+            <p class="overline">
+              Margie Smith, president of the Techwood Homes tenants' association
+            </p>
+          </div>
+          <div class="quote right parallax" data-parallax="1.1">
+            <h3>
+              “Part of creating a new place is that we wanted to put some
+              distance between the old bad history and the new history.”
+            </h3>
+            <p class="overline">
+              Renee Glover, director of the Atlanta Housing Authority during the
+              1996 Olympics
+            </p>
+          </div>
+        </div>
+        <div class="part_3">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/zo8VHtv7dC0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="part_4">
+          <p>
+            Techwood Homes, invisible during the successful Olympics bid, has
+            suddenly reappeared as Atlanta's most troublesome urban dilemma.
+            Across the street from the future Olympic Village and within blocks
+            of many future athletic events, Techwood has become an embarrassment
+            to Games promoters eager to show off Atlanta to the world.
+          </p>
+          <div>
+            <p>
+              When Glover took over the reins of the city’s Housing Authority in
+              1994, she did do something. She started the Olympic Legacy
+              Program, a plan for redeveloping Atlanta’s public housing.
+            </p>
+            <p>
+              The first project to be demolished was Techwood Homes. The logic
+              was it put too much poverty in one place. The housing authority
+              wanted to start over with a new approach: a private development
+              for a mix of incomes.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="index.js"></script>
   </body>
