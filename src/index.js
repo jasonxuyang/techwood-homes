@@ -3,6 +3,7 @@ let sectionHero = document.getElementById("section_hero");
 let section1 = document.getElementById("section_1");
 let section2 = document.getElementById("section_2");
 let section3 = document.getElementById("section_3");
+let section4 = document.getElementById("section_4");
 let images = document.querySelectorAll("img");
 let imageCaption = document.getElementById("img_caption");
 let body = document.body;
@@ -48,6 +49,9 @@ const scrollToSection1 = () => {
 const scrollToSection2 = () => {
   window.scrollBy(0, section3.getBoundingClientRect().top - 128);
 };
+const scrollToSection3 = () => {
+  window.scrollBy(0, section4.getBoundingClientRect().top - 128);
+};
 
 const handleMouseEnter = (e) => {
   imageCaption.textContent = e.target.alt;
@@ -61,12 +65,7 @@ const handleMouseLeave = (e) => {
 const checkInView = (element) => {
   let bounding = element.getBoundingClientRect();
 
-  return (
-    bounding.top >= 0 &&
-    bounding.left >= 0 &&
-    bounding.bottom <= window.innerHeight &&
-    bounding.right <= window.innerWidth
-  );
+  return bounding.top >= 0;
 };
 
 const fadeIn = (element) => {
